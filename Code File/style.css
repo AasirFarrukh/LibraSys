@@ -1,0 +1,40 @@
+.menuItem:hover{
+	
+    -fx-border-color: #910707;
+    -fx-border-width: 0px 0px 5px 0px;
+}
+
+.sidebarItem:hover{
+    -fx-background-color: #fc3d3d;
+    -fx-border-color: #910707;
+    -fx-border-width: 0px 0px 0px 5px;
+}
+
+.AddItem:hover{
+	-fx-background-color: #fc3d3d;
+	-fx-border-color: #910707;
+    -fx-border-width: 0px 0px 5px 0px;
+}
+
+
+.text-field:focused {
+    -fx-border-color: #fc3d3d;
+}
+
+.table-view:focused {
+    -fx-border-color: #fc3d3d;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #910707;
+    -fx-control-inner-background-alt: derive(-fx-background, -9%);
+}
+
+.list-view:focused {
+	-fx-border-color: #fc3d3d;
+}
+
+.list-view .cell:selected {
+    -fx-background-color: #910707;
+    -fx-control-inner-background-alt: derive(-fx-background, -9%);
+}

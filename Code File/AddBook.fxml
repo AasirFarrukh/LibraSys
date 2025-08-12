@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane Stylesheets="@style.css" prefHeight="700.0" prefWidth="900.0" style="-fx-background-color: White;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AddBookController">
+   <children>
+   		<BorderPane layoutX="114.0" layoutY="54.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        	<top>
+            	<AnchorPane prefHeight="38.0" prefWidth="1000.0" style="-fx-background-color: BLACK;" BorderPane.alignment="CENTER">
+                	<children>
+                    	<Pane layoutX="102.0" layoutY="20.0" prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: #032d4d;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        	<children>
+                            	<ImageView fx:id="Exit" fitHeight="22.0" fitWidth="22.0" layoutX="869.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                                	<image>
+                                    	<Image url="@Images/exit.png" />
+                                    </image>
+                           			<cursor>
+                              			<Cursor fx:constant="HAND" />
+                           			</cursor>
+                                </ImageView>
+                                <Label layoutX="14.0" layoutY="6.0" text="LibraSys" textFill="WHITE">
+                           			<font>
+                              			<Font name="Copperplate Gothic Bold" size="12.0" />
+                           			</font>
+                        		</Label>
+                        		<ImageView blendMode="SCREEN" fitHeight="26.0" fitWidth="29.0" layoutX="437.0" pickOnBounds="true" preserveRatio="true">
+                           			<image>
+                              			<Image url="@../LibraSys-D1.png" />
+                           			</image>
+                        		</ImageView>
+                            </children>
+                        </Pane>
+                        <HBox layoutX="782.4" layoutY="1.0" prefHeight="45.0" prefWidth="118.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="782.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
+                            <children>
+                        		<JFXButton fx:id="Logout" onAction="#logout" prefHeight="60.0" prefWidth="136.0" styleClass="menuItem" text="Logout" textFill="WHITE">
+                           			<font>
+                              			<Font name="System Bold" size="14.0" />
+                           			</font>
+                           			<cursor>
+                              			<Cursor fx:constant="HAND" />
+                           			</cursor>
+                        		</JFXButton>
+                            </children>
+                        </HBox>
+                          <!-- MENU and MENU Close buttons -->
+                        <JFXButton fx:id="Menu" layoutX="14.0" layoutY="27.0" prefHeight="36.0" prefWidth="105.0" styleClass="menuItem" text="MENU" textFill="WHITE" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="775.0" AnchorPane.topAnchor="30.0">
+                        	<graphic>
+                            	<ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                	<image>
+                                    	<Image url="@Images/menu.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <font>
+                            	<Font name="System Bold" size="14.0" />
+                            </font>
+                     		<cursor>
+                        		<Cursor fx:constant="HAND" />
+                     		</cursor>
+                        </JFXButton>
+                        <JFXButton fx:id="MenuClose" layoutX="28.0" layoutY="29.0" prefHeight="32.0" prefWidth="132.0" text="MENU" textFill="WHITE" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="775.0" AnchorPane.topAnchor="30.0">
+                        	<graphic>
+                                  <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                      <image>
+                                          <Image url="@Images/menu.png" />
+                                      </image>
+                                  </ImageView>
+                              </graphic>
+                              <font>
+                                  <Font name="System Bold" size="14.0" />
+                              </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                          </JFXButton>
+                    </children>
+                </AnchorPane>
+            </top>
+            <left>
+                <AnchorPane fx:id="slider" prefHeight="362.0" prefWidth="176.0" style="-fx-background-color: BLACK;" BorderPane.alignment="CENTER">
+                    <children>
+                        <VBox layoutX="14.0" layoutY="8.0" prefHeight="622.0" prefWidth="176.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="8.0">
+                            <children>
+                                <JFXButton fx:id="HomeButton" alignment="BASELINE_LEFT" onAction="#switchToHome" prefHeight="38.0" prefWidth="176.0" styleClass="sidebarItem" text="Home" textFill="WHITE">
+                                    <font>
+                                        <Font name="System Bold" size="15.0" />
+                                    </font>
+                                    <graphic>
+                                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@Images/dash.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                                </JFXButton>
+                                <JFXButton alignment="BASELINE_LEFT" prefHeight="38.0" prefWidth="176.0" style="-fx-background-color: #910707;" styleClass="sidebarItem" text="Add Book" textFill="WHITE">
+                                    <font>
+                                        <Font name="System Bold" size="15.0" />
+                                    </font>
+                                    <graphic>
+                                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@Images/add.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                                </JFXButton>
+                                <JFXButton fx:id="MemberButton" alignment="BASELINE_LEFT" onAction="#switchToMember" prefHeight="38.0" prefWidth="176.0" styleClass="sidebarItem" text="Add Member" textFill="WHITE">
+                                    <font>
+                                        <Font name="System Bold" size="15.0" />
+                                    </font>
+                                    <graphic>
+                                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@Images/addMemberWhite.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                                </JFXButton>
+                                <JFXButton fx:id="CatalogButton" alignment="BASELINE_LEFT" onAction="#switchToCatalog" prefHeight="38.0" prefWidth="176.0" styleClass="sidebarItem" text="View Catalog" textFill="WHITE">
+                                    <font>
+                                        <Font name="System Bold" size="15.0" />
+                                    </font>
+                                    <graphic>
+                                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@Images/data.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                                </JFXButton>
+                                <JFXButton fx:id="ViewMemberButton" alignment="BASELINE_LEFT" onAction="#switchToViewMember" prefHeight="38.0" prefWidth="176.0" styleClass="sidebarItem" text="View Members" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Images/membersWhite.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton fx:id="IssueButton" alignment="BASELINE_LEFT" onAction="#switchToIssueBook" prefHeight="38.0" prefWidth="176.0" styleClass="sidebarItem" text="Issue Book" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Images/issueBookWhite.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton fx:id="ReturnButton" alignment="BASELINE_LEFT" onAction="#switchToReturnBook" prefHeight="38.0" prefWidth="176.0" styleClass="sidebarItem" text="Return/Renew" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Images/renewWhite.jpg" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                            </children>
+                        </VBox>
+                    </children>
+                </AnchorPane>
+            </left>
+         <center>
+            <Pane BorderPane.alignment="CENTER">
+        <children>
+                  <VBox layoutX="73.0" layoutY="111.0" prefHeight="442.0" prefWidth="400.0">
+                     <children>
+                        <TextField fx:id="title" prefHeight="33.0" prefWidth="400.0" promptText="Title" style="-fx-background-color: Transparent; -fx-border-color: #910707; -fx-border-width: 0px 0px 2px 0px;">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <TextField fx:id="author" prefHeight="33.0" prefWidth="400.0" promptText="Author" style="-fx-background-color: Transparent; -fx-border-color: #910707; -fx-border-width: 0px 0px 2px 0px;">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <TextField fx:id="orcid" layoutX="20.0" layoutY="139.0" prefHeight="33.0" prefWidth="400.0" promptText="ORCID" style="-fx-background-color: Transparent; -fx-border-color: #910707; -fx-border-width: 0px 0px 2px 0px;">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <TextField fx:id="isbn" prefHeight="33.0" prefWidth="400.0" promptText="ISBN" style="-fx-background-color: Transparent; -fx-border-color: #910707; -fx-border-width: 0px 0px 2px 0px;">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <TextField fx:id="genre" prefHeight="33.0" prefWidth="400.0" promptText="Genre" style="-fx-background-color: Transparent; -fx-border-color: #910707; -fx-border-width: 0px 0px 2px 0px;">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <TextField fx:id="date" prefHeight="33.0" prefWidth="400.0" promptText="Date (YYYY-MM-DD)" style="-fx-background-color: Transparent; -fx-border-color: #910707; -fx-border-width: 0px 0px 2px 0px;">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <TextField fx:id="status" prefHeight="33.0" prefWidth="400.0" promptText="Status (Available, Not Available)" style="-fx-background-color: Transparent; -fx-border-color: #910707; -fx-border-width: 0px 0px 2px 0px;">
+                           <VBox.margin>
+                              <Insets bottom="20.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0">
+                           <children>
+                              <JFXButton fx:id="addButton" onAction="#addBook" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: Black;" styleClass="AddItem" text="Add Book" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXButton>
+                              <JFXButton fx:id="ResetButton" layoutX="10.0" layoutY="10.0" onAction="#resetPage" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: Black;" styleClass="AddItem" text="Reset" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXButton>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <Label layoutX="195.0" layoutY="60.0" text="Add a New Book">
+                     <font>
+                        <Font name="System Bold Italic" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="640.0" layoutY="17.0" text="Add Book">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="20.0" fitWidth="18.0" layoutX="622.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/addBlack.png" />
+                     </image>
+                  </ImageView>
+        </children>
+    </Pane>
+         </center>
+        </BorderPane>
+    </children>
+</AnchorPane>
